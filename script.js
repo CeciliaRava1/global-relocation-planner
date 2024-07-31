@@ -17,6 +17,15 @@ links.forEach(function (link) {
 
         // Add class 'active' to the current link
         this.classList.add('active');
+
+        // Obtain corresponding information according to the link
+        let information = getInformation(this.textContent);
+
+        // Show information in the DOM
+        elementTitle.innerHTML = information.title;
+        elementDescription.innerHTML = information.description;
+        elementSubtitle.innerHTML = information.subtitle;
+        elementParagraph.innerHTML = information.paragraph;
     });
 })
 
@@ -28,5 +37,5 @@ function getInformation(link) {
         'Germany': germany,
         'United States': unitedStates
     }
-    return information(link);
+    return information[link];
 }
