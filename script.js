@@ -11,3 +11,14 @@ let elementParagraph = document.getElementById('paragraph');
 links.forEach(function(link){
     link.addEventListener('click');
 })
+
+// Get the correct information from 'countries.js'
+function getInformation(link){
+    let information = {
+        'Argentina' : argentina,
+        'Canada' : canada,
+        'Germany' : germany,
+        'United States' : unitedStates
+    }
+    return information(link);
+}
