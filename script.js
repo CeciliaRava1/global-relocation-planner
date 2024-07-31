@@ -8,17 +8,22 @@ let elementSubtitle = document.getElementById('subtitle');
 let elementParagraph = document.getElementById('paragraph');
 
 // Add a click event to each link
-links.forEach(function(link){
-    link.addEventListener('click');
+links.forEach(function (link) {
+    link.addEventListener('click', function () {
+        // Remove class 'active' of all links
+        links.forEach(function (link) {
+            link.classList.remove('active');
+        })
+    });
 })
 
 // Get the correct information from 'countries.js'
-function getInformation(link){
+function getInformation(link) {
     let information = {
-        'Argentina' : argentina,
-        'Canada' : canada,
-        'Germany' : germany,
-        'United States' : unitedStates
+        'Argentina': argentina,
+        'Canada': canada,
+        'Germany': germany,
+        'United States': unitedStates
     }
     return information(link);
 }
