@@ -14,6 +14,9 @@ links.forEach(function (link) {
         links.forEach(function (link) {
             link.classList.remove('active');
         })
+
+        // Add class 'active' to the current link
+        this.classList.add('active');
     });
 })
 
