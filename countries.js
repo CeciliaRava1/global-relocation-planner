@@ -25,3 +25,10 @@ const unitedStates = {
     subtitle: "How are people in United States?",
     paragraph: "Americans are known for their friendliness, openness, and individualism. They often value personal freedom and entrepreneurial spirit, which is reflected in a diverse and dynamic society. Americans tend to be optimistic and ambitious, with a strong focus on achievement and progress. Social interactions can be casual and informal, with a common emphasis on politeness and respect for personal space."
 }
+
+export {
+    argentina,
+    canada,
+    germany,
+    unitedStates
+}
